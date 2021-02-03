@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <Sidebar />
+    <Wrapper />
   </div>
 </template>
 
 <script>
-  import Sidebar from "./components/Sidebar"
+  import Sidebar from "./components/Sidebar";
+  import Wrapper from "./components/Wrapper";
 
   export default {
     name: 'App',
     components: {
-      Sidebar
+      Sidebar,
+      Wrapper
     }
   }
 </script>
@@ -34,8 +37,12 @@
 
   #app {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     min-height: 100vh;
     width: 100%;
+
+    @media(min-width: 768px) {
+      flex-direction: row;
+    }
   }
 </style>
