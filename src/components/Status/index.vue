@@ -1,15 +1,18 @@
 <template>
   <section class="status-box">
     <Ajuda />
+    <Progresso />
   </section>
 </template>
 
 <script>
-  import Ajuda from "./Ajuda"
+  import Ajuda from "./Ajuda";
+  import Progresso from "./Progresso";
 
   export default {
     components: {
-      Ajuda
+      Ajuda,
+      Progresso
     }
   }
 </script>
