@@ -3,8 +3,8 @@
     <img 
       src="../../assets/images/logo.png" 
       alt="Logo Uello" 
-      width="40" 
-      height="40"
+      width="46" 
+      height="46"
     >
     <div class="d-block d-sm-none">
       <Login :isMobile="true" />
@@ -25,7 +25,7 @@
   .sidebar {
     background-color: var(--primary-color);
     min-height: 100vh;
-    padding: 0.625rem 0.313rem;
+    padding: 0.75rem;
 
     @media(max-width: 768px) {
       align-items: center;

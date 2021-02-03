@@ -18,6 +18,7 @@
   .login {
     position: absolute;
     right: 1.25rem;
+    top: 1.063rem;
 
     &.mobile {
       position: unset;
