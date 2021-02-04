@@ -4,6 +4,7 @@
     <Progresso />
     <Entrega />
     <Endereco />
+    <Horario />
   </section>
 </template>
 
@@ -12,13 +13,15 @@
   import Progresso from "./Progresso";
   import Entrega from "./Entrega";
   import Endereco from "./Endereco";
+  import Horario from "./Horario";
 
   export default {
     components: {
       Ajuda,
       Progresso,
       Entrega,
-      Endereco
+      Endereco,
+      Horario
     }
   }
 </script>

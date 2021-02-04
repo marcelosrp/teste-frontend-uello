@@ -6,7 +6,7 @@
       </li>
       <li class="active">
         <b-icon icon="clock"></b-icon>
-        Pedido <br />em separação
+        Pedido em <br /> separação
       </li>
       <li class="active">
         <b-icon icon="truck"></b-icon>
@@ -33,19 +33,19 @@
   .progressbar {
     display: flex;
     counter-reset: step;
-    margin: 60px 0 40px 0;
+    margin: 3.75rem 0 2rem 0;
     width: 100%;
 
     li {
       list-style-type: none;
       width: 25%;
       float: left;
-      font-size: 0.5rem;
+      font-size: 0.6rem;
       position: relative;
       text-align: center;
       color: #4B4B4D;
       z-index: 1;
-      line-height: 10px;
+      line-height: 0.625rem;
       font-weight: 600;
 
       &::before {
@@ -54,22 +54,22 @@
         border-radius: 50%;
         content: '';
         display: block;
-        height: 12px;
-        line-height: 30px;
+        height: 0.75rem;
+        line-height: 1.875rem;
         margin: 0 auto 10px auto;
         text-align: center;
         transition: all .8s;
-        width: 12px;
+        width: 0.75rem;
         z-index: 1;
       }
 
       &::after {
         background-color: #CCC;
         content: '';
-        height: 2px;
+        height: 0.125rem;
         left: -41%;
         position: absolute;
-        top: 5px;
+        top: 0.313rem;
         transition: all .8s;
         z-index: -1;
         width: 100%;
@@ -95,17 +95,17 @@
 
         svg {
           color: var(--primary-color);
-          font-size: 14px;
-          top: -26px;
+          font-size: 1rem;
+          top: -1.625rem;
         }
       }
 
       svg {
         color: #CCC;
-        font-size: 22px;
+        font-size: 1.5rem;
         left: 50%;
         position: absolute;
-        top: -30px;
+        top: -1.875rem;
         transform: translateX(-50%);
       }
     }

@@ -5,18 +5,18 @@
       <Login :isMobile="false" />
     </div>
 
-    <Status />
+    <Tracking />
   </main>
 </template>
 
 <script>
   import Login from "../Login";
-  import Status from "../Status";
+  import Tracking from "../Tracking";
 
   export default {
     components: {
       Login,
-      Status
+      Tracking
     }
   }
 </script>
