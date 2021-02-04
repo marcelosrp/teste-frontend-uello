@@ -28,7 +28,7 @@
 
     &__name {
       color: var(--primary-color);
-      font-size: 1.125rem;
+      font-size: 1rem;
       font-weight: 700;
       margin: 0;
       padding-left: 0.938rem;
