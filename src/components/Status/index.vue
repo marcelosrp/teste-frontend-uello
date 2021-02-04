@@ -2,17 +2,20 @@
   <section class="status-box">
     <Ajuda />
     <Progresso />
+    <Entrega />
   </section>
 </template>
 
 <script>
   import Ajuda from "./Ajuda";
   import Progresso from "./Progresso";
+  import Entrega from "./Entrega";
 
   export default {
     components: {
       Ajuda,
-      Progresso
+      Progresso,
+      Entrega
     }
   }
 </script>

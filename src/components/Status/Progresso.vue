@@ -1,24 +1,22 @@
 <template>
-  <div>
     <ul class="progressbar">
-        <li class="active">
-          <b-icon icon="inbox-fill"></b-icon>
-          Solicitação
-        </li>
-        <li class="active">
-          <b-icon icon="clock"></b-icon>
-          Pedido <br />em separação
-        </li>
-        <li class="active">
-          <b-icon icon="truck"></b-icon>
-          Motorista <br /> em trânsito
-        </li>
-        <li>
-          <b-icon icon="check"></b-icon>
-          Pedido <br /> entregue
-        </li>
+      <li class="active">
+        <b-icon icon="inbox-fill"></b-icon>
+        Solicitação
+      </li>
+      <li class="active">
+        <b-icon icon="clock"></b-icon>
+        Pedido <br />em separação
+      </li>
+      <li class="active">
+        <b-icon icon="truck"></b-icon>
+        Motorista <br /> em trânsito
+      </li>
+      <li>
+        <b-icon icon="check"></b-icon>
+        Pedido <br /> entregue
+      </li>
     </ul>
-  </div>
 </template>
 
 <script>
@@ -33,8 +31,10 @@
     https://codepen.io/vikas001/pen/bJzdaj
   */
   .progressbar {
-    margin: 60px 0 50px 0;
+    display: flex;
     counter-reset: step;
+    margin: 60px 0 40px 0;
+    width: 100%;
 
     li {
       list-style-type: none;
