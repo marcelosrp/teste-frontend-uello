@@ -6,6 +6,7 @@
     <Endereco />
     <Horario />
     <InfosEntrega />
+    <Historico />
   </section>
 </template>
 
@@ -16,6 +17,7 @@
   import Endereco from "./Endereco";
   import Horario from "./Horario";
   import InfosEntrega from "./InfosEntrega";
+  import Historico from "./Historico";
 
   export default {
     components: {
@@ -24,7 +26,8 @@
       Entrega,
       Endereco,
       Horario,
-      InfosEntrega
+      InfosEntrega,
+      Historico
     }
   }
 </script>
