@@ -1,7 +1,7 @@
 <template>
   <div class="login" :class="[ isMobile && 'mobile' ]">
     <h1 class="login__name" :class="[ isMobile && 'mobile' ]">
-      hirota food express headquarters
+      {{ name }}
     </h1>
   </div>
 </template>
@@ -9,6 +9,7 @@
 <script>
   export default {
     props: {
+      name: String,
       isMobile: Boolean
     }
   }

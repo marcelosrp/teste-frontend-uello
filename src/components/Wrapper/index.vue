@@ -2,7 +2,7 @@
   <main class="main">
     <!-- only desk login -->
     <div class="d-none d-sm-block">
-      <Login :isMobile="false" />
+      <Login :isMobile="false" name="hirota food express headquarters" />
     </div>
     <Tracking />
     <Mapa />

@@ -7,7 +7,7 @@
       height="46"
     >
     <div class="d-block d-sm-none">
-      <Login :isMobile="true" />
+      <Login :isMobile="true" name="hirota food express headquarters" />
     </div>
   </aside>
 </template>
