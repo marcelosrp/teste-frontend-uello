@@ -6,23 +6,27 @@
     </div>
 
     <Tracking />
+    <Mapa />
   </main>
 </template>
 
 <script>
   import Login from "../Login";
   import Tracking from "../Tracking";
+  import Mapa from "../Mapa";
 
   export default {
     components: {
       Login,
-      Tracking
+      Tracking,
+      Mapa
     }
   }
 </script>
 
 <style lang="scss" scoped>
   .main {
+    display: flex;
     min-height: 100vh;
     padding: 3.75rem 1.25rem;
     position: relative;
