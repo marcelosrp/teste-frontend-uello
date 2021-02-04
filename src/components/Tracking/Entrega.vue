@@ -5,11 +5,11 @@
         Saiu para entrega
       </h2>
       <p class="entrega__texto">
-        Seu pedido da <strong>{{ remetente }}</strong> saiu para entrega,
+        Seu pedido da <strong>{{ data.remetente }}</strong> saiu para entrega,
         e será <strong>entregue</strong> no <strong>endereço</strong>:
       </p>
     </div>
-    <Endereco :endereco="endereco" />
+    <Endereco />
     <Horario />
   </div>
 </template>
@@ -18,7 +18,14 @@
   import Endereco from "./Endereco";
   import Horario from "./Horario";
 
+  import store from "../../store/store";
+
   export default {
+    data () {
+      return {
+        data: store.state.data[0]
+      }
+    },
     props: {
       remetente: String,
       onDelivery: Boolean,

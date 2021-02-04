@@ -4,8 +4,7 @@
     <Progresso />
     <Entrega 
       remetente="Dafiti"
-      :onDelivery="true" 
-      :endereco="endereco"
+      :onDelivery="true"
     />
     <InfosEntrega />
     <Historico />
@@ -20,17 +19,6 @@
   import Historico from "./Historico";
 
   export default {
-    data () {
-      return {
-        endereco: {
-          logradouro: "Avenida Doutor Gastão Vidigal, 1132",
-          bairro: "Vila Leopoldina",
-          cidade: "São Paulo",
-          estado: "SP",
-          complemento: "Apto - 1234",
-        }
-      }
-    },
     components: {
       Ajuda,
       Progresso,

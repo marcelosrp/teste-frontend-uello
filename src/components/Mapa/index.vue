@@ -7,12 +7,16 @@
 
   export default {
     name: "mapa",
-    data() {
+    props: {
+      lon: Number,
+      lat: Number
+    },
+    data () {
       return {
         accessToken: "pk.eyJ1IjoibWFyY2Vsb3NycCIsImEiOiJja2tyM3EwNWcwMWE3MndwbG96aXI5OHQwIn0.EvAdKRr-7stL8vtqBejMzw",
       };
     },
-    mounted() {
+    mounted () {
       mapboxgl.accessToken = this.accessToken;
 
       const map = new mapboxgl.Map({
@@ -20,7 +24,6 @@
         style: "mapbox://styles/mapbox/streets-v11",
         center: [-46.73976, -23.52874],
         zoom: 14,
-        
       });
 
       new mapboxgl.Marker()

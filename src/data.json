@@ -1,0 +1,29 @@
+[
+  {
+    "remetente": "Dafiti",
+    "endereco": {
+      "logradouro": "Avenida Doutor Gastão Vidigal, 1132",
+      "bairro": "Vila Leopoldina",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "complemento": "Apto 1234",
+      "lon": -46.73976,
+      "lat": -23.52874
+    },
+    "horario_estimado": {
+      "de": "14:45",
+      "ate": "16:58"
+    },
+    "qtd_entregas": 1,
+    "dados_entrega": {
+      "entrega": 19,
+      "atual": 18,
+      "volume": 3,
+      "motorista": "Vinicius Marques do Nascimento",
+      "estimativa": {
+        "de": "14:45",
+        "ate": "16:58"
+      }
+    }
+  }
+]
