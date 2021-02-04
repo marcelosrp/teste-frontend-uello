@@ -3,6 +3,7 @@
     <Ajuda />
     <Progresso />
     <Entrega />
+    <Endereco />
   </section>
 </template>
 
@@ -10,12 +11,14 @@
   import Ajuda from "./Ajuda";
   import Progresso from "./Progresso";
   import Entrega from "./Entrega";
+  import Endereco from "./Endereco";
 
   export default {
     components: {
       Ajuda,
       Progresso,
-      Entrega
+      Entrega,
+      Endereco
     }
   }
 </script>
@@ -28,5 +31,9 @@
     height: 100%;
     padding: 1.25rem;
     width: 300px;
+
+    @media(max-width: 768px) {
+      width: 100%;
+    }
   }
 </style>
