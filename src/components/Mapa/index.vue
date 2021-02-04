@@ -18,16 +18,13 @@
       const map = new mapboxgl.Map({
         container: "mapContainer",
         style: "mapbox://styles/mapbox/streets-v11",
-        center: [103.811279, 1.345399],
-        zoom: 12,
-        maxBounds: [
-          [103.6, 1.1704753],
-          [104.1, 1.4754753],
-        ],
+        center: [-46.73976, -23.52874],
+        zoom: 14,
+        
       });
 
       new mapboxgl.Marker()
-        .setLngLat([103.811279, 1.345399])
+        .setLngLat([-46.73976, -23.52874])
         .addTo(map);
 
       const nav = new mapboxgl.NavigationControl();
@@ -39,7 +36,8 @@
 
 <style lang="scss" scoped>
   .mapa {
-    width: 100%;
+    box-shadow: 5px 1px 9px rgba(0, 0, 0, 0.25);
     height: 100%;
+    width: 100%;
   }
 </style>

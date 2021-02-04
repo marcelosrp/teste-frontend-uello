@@ -4,7 +4,6 @@
     <div class="d-none d-sm-block">
       <Login :isMobile="false" />
     </div>
-
     <Tracking />
     <Mapa />
   </main>

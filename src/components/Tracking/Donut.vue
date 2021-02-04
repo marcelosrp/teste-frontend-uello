@@ -2,7 +2,7 @@
   <vc-donut 
     :sections="sections"
     :thickness="12"
-    :size="90" 
+    :size="85" 
     background="#FFFFFF" 
     foreground="#E5E5E5"
     unit="px"

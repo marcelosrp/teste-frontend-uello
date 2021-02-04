@@ -2,18 +2,20 @@
   <div class="endereco">
     <b-icon icon="geo-alt-fill"></b-icon>
     <p class="endereco__texto">
-      Avenida Doutor Gastão Vidigal, 1132
+      {{ endereco.logradouro}}
       <br>
-      Vila Leopoldina - São Paulo - SP
+      {{ endereco.bairro }} - {{ endereco.cidade}} - {{ endereco.estado}}
       <br>
-      Apto - 1234
+      {{ endereco.complemento }}
     </p>
   </div>
 </template>
 
 <script>
   export default {
-
+    props: {
+      endereco: Object
+    }
   }
 </script>
 

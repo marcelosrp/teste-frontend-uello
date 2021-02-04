@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <Sidebar />
-    <Wrapper />
+      <Sidebar />
+      <Wrapper />
   </div>
 </template>
 
 <script>
+  
   import Sidebar from "./components/Sidebar";
   import Wrapper from "./components/Wrapper";
 

@@ -1,14 +1,33 @@
 <template>
-  <div class="entrega">
-    <h2 class="entrega__titulo">Saiu para entrega</h2>
-    <p class="entrega__texto">Seu pedido da <strong>Dafiti</strong> saiu para entrega,
-    e será <strong>entregue</strong> no <strong>endereço</strong>:</p>
+  <div v-if="onDelivery">
+    <div class="entrega">
+      <h2 class="entrega__titulo">
+        Saiu para entrega
+      </h2>
+      <p class="entrega__texto">
+        Seu pedido da <strong>{{ remetente }}</strong> saiu para entrega,
+        e será <strong>entregue</strong> no <strong>endereço</strong>:
+      </p>
+    </div>
+    <Endereco :endereco="endereco" />
+    <Horario />
   </div>
 </template>
 
 <script>
-  export default {
+  import Endereco from "./Endereco";
+  import Horario from "./Horario";
 
+  export default {
+    props: {
+      remetente: String,
+      onDelivery: Boolean,
+      endereco: Object
+    },
+    components: {
+      Endereco,
+      Horario,
+    },
   }
 </script>
 
