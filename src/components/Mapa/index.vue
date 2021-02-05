@@ -32,12 +32,116 @@
           zoom: 14,
         });
 
-        new mapboxgl.Marker()
-          .setLngLat([this.lon, this.lat])
-          .addTo(map);
-
         const nav = new mapboxgl.NavigationControl();
         map.addControl(nav, "top-right");
+
+        const canvas = map.getCanvasContainer();
+        const destination = [this.data.endereco.lon, this.data.endereco.lat];
+
+        const getRoute = async () => {
+          const url = `https://api.mapbox.com/directions/v5/mapbox/driving/${this.lon},${this.lat};${destination[0]},${destination[1]}?geometries=geojson&access_token=${mapboxgl.accessToken}`;
+
+          const response = await fetch(url);
+          const data = await response.json();
+          const route = data.routes[0].geometry.coordinates;
+
+          const geojson = {
+            type: "Feature",
+            properties: {},
+            geometry: {
+              type: "LineString",
+              coordinates: route,
+            },
+          };
+
+          map.addLayer({
+            id: "route",
+            type: "line",
+            source: {
+              type: "geojson",
+              data: {
+                type: "Feature",
+                properties: {},
+                geometry: {
+                  type: "LineString",
+                  coordinates: geojson,
+                },
+              },
+            },
+            layout: {
+              "line-join": "round",
+              "line-cap": "round",
+            },
+            paint: {
+              "line-color": "#3887be",
+              "line-width": 5,
+              "line-opacity": 0.75,
+            },
+          });
+
+          if (map.getSource("route")) {
+            map.getSource("route").setData(geojson);
+          }
+        }
+
+        const setPoints = () => {
+          canvas.style.cursor = "";
+
+          map.addLayer({
+            id: "point",
+            type: "circle",
+            source: {
+              type: "geojson",
+              data: {
+                type: "FeatureCollection",
+                features: [
+                  {
+                    type: "Feature",
+                    properties: {},
+                    geometry: {
+                      type: "Point",
+                      coordinates: [this.lon, this.lat],
+                    },
+                  },
+                ],
+              },
+            },
+            paint: {
+              "circle-radius": 10,
+              "circle-color": "#3887be",
+            },
+          });
+
+          map.addLayer({
+            id: "end",
+            type: "circle",
+            source: {
+              type: "geojson",
+              data: {
+                type: "FeatureCollection",
+                features: [
+                  {
+                    type: "Feature",
+                    properties: {},
+                    geometry: {
+                      type: "Point",
+                      coordinates: destination,
+                    },
+                  },
+                ],
+              },
+            },
+            paint: {
+              "circle-radius": 10,
+              "circle-color": "#f30",
+            },
+          });
+        }
+
+        map.on('load', () => {
+          setPoints();
+          getRoute();
+        });
       }
     }
   };
