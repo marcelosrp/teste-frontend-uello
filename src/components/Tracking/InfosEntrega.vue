@@ -3,18 +3,38 @@
     <Donut />
     
     <ul class="infos-entrega__lista">
-      <li>Sua entrega é a nº: <span class="entrega-atual">19</span></li>
-      <li>Entrega atual: <span>18</span></li>
-      <li>Quantidade de volumes: <span>3</span></li>
-      <li>Motorista: <span>Vinicius Marques do Nascimento</span></li>
-      <li>Horário Estimado: <span>14:45 - 16:58</span></li>
+      <li>
+        Sua entrega é a nº: <span class="entrega-atual">{{ data.dados_entrega.entrega }}</span>
+      </li>
+      <li>
+        Entrega atual: <span>{{ data.dados_entrega.atual }}</span>
+      </li>
+      <li>
+        Quantidade de volumes: <span>{{ data.dados_entrega.volume }}</span>
+      </li>
+      <li>
+        Motorista: <span>{{ data.dados_entrega.motorista }}</span>
+      </li>
+      <li>
+        Horário Estimado: 
+        <span>
+          {{ data.dados_entrega.estimativa.de }} - {{ data.dados_entrega.estimativa.ate }}
+        </span>
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
-  import Donut from "./Donut"
+  import Donut from "./Donut";
+  import data from "../../data.json";
+
   export default {
+    data () {
+      return {
+        data: data[0]
+      }
+    },
     components: {
       Donut
     }

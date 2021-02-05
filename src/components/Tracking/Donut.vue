@@ -8,19 +8,21 @@
     unit="px"
     :auto-adjust-text-size="true"
   >
-    <p class="donut-text">
-      Falta
-      <br>
-      <span>1</span>
-      <br>
-      Entrega
+    <p class="donut-text" v-if="data.qtd_entregas > 1">
+      Faltam<br><span>{{ data.qtd_entregas}}</span><br>Entregas
+    </p>
+    <p class="donut-text" v-else>
+      Falta<br><span>{{ data.qtd_entregas}}</span><br>Entrega
     </p>
   </vc-donut>
 </template>
 <script>
+  import data from "../../data.json";
+
   export default {
     data() {
       return {
+        data: data[0],
         sections: [
           {
             value: 75,

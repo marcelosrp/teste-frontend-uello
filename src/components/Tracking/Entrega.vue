@@ -5,7 +5,7 @@
         Saiu para entrega
       </h2>
       <p class="entrega__texto">
-        Seu pedido da <strong></strong> saiu para entrega,
+        Seu pedido da <strong>{{ data.remetente }}</strong> saiu para entrega,
         e será <strong>entregue</strong> no <strong>endereço</strong>:
       </p>
     </div>
@@ -17,10 +17,15 @@
 <script>
   import Endereco from "./Endereco";
   import Horario from "./Horario";
+  import data from "../../data.json";
 
   export default {
+    data () {
+      return {
+        data: data[0]
+      }
+    },
     props: {
-      remetente: String,
       onDelivery: Boolean,
     },
     components: {

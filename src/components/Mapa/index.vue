@@ -4,16 +4,14 @@
 
 <script>
   import mapboxgl from "mapbox-gl";
+  import data from "../../data.json";
 
   export default {
     name: "mapa",
-    props: {
-      lon: Number,
-      lat: Number
-    },
     data () {
       return {
         accessToken: "pk.eyJ1IjoibWFyY2Vsb3NycCIsImEiOiJja2tyM3EwNWcwMWE3MndwbG96aXI5OHQwIn0.EvAdKRr-7stL8vtqBejMzw",
+        data: data[0]
       };
     },
     mounted () {
@@ -22,12 +20,12 @@
       const map = new mapboxgl.Map({
         container: "mapContainer",
         style: "mapbox://styles/mapbox/streets-v11",
-        center: [-46.73976, -23.52874],
+        center: [this.data.endereco.lon, this.data.endereco.lat],
         zoom: 14,
       });
 
       new mapboxgl.Marker()
-        .setLngLat([-46.73976, -23.52874])
+        .setLngLat([this.data.endereco.lon, this.data.endereco.lat])
         .addTo(map);
 
       const nav = new mapboxgl.NavigationControl();
