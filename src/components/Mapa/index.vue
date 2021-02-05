@@ -8,6 +8,10 @@
 
   export default {
     name: "mapa",
+    props: {
+      lon: Number,
+      lat: Number
+    },
     data () {
       return {
         accessToken: "pk.eyJ1IjoibWFyY2Vsb3NycCIsImEiOiJja2tyM3EwNWcwMWE3MndwbG96aXI5OHQwIn0.EvAdKRr-7stL8vtqBejMzw",
@@ -15,23 +19,27 @@
       };
     },
     mounted () {
-      mapboxgl.accessToken = this.accessToken;
-
-      const map = new mapboxgl.Map({
-        container: "mapContainer",
-        style: "mapbox://styles/mapbox/streets-v11",
-        center: [this.data.endereco.lon, this.data.endereco.lat],
-        zoom: 14,
-      });
-
-      new mapboxgl.Marker()
-        .setLngLat([this.data.endereco.lon, this.data.endereco.lat])
-        .addTo(map);
-
-      const nav = new mapboxgl.NavigationControl();
-      map.addControl(nav, "top-right");
-      
+      this.buildMap();
     },
+    methods: {
+      buildMap () {
+        mapboxgl.accessToken = this.accessToken;
+
+        const map = new mapboxgl.Map({
+          container: "mapContainer",
+          style: "mapbox://styles/mapbox/streets-v11",
+          center: [this.lon, this.lat],
+          zoom: 14,
+        });
+
+        new mapboxgl.Marker()
+          .setLngLat([this.lon, this.lat])
+          .addTo(map);
+
+        const nav = new mapboxgl.NavigationControl();
+        map.addControl(nav, "top-right");
+      }
+    }
   };
 </script>
 

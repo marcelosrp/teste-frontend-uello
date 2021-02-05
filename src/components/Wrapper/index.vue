@@ -5,7 +5,7 @@
       <Login :isMobile="false" name="hirota food express headquarters" />
     </div>
     <Tracking />
-    <Mapa />
+    <Mapa :lon="currentLon" :lat="currentLat" />
   </main>
 </template>
 
@@ -15,10 +15,24 @@
   import Mapa from "../Mapa";
 
   export default {
+    data () {
+      return {
+        currentLat: null,
+        currentLon: null,
+      }
+    },
     components: {
       Login,
       Tracking,
       Mapa
+    },
+    mounted () {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          this.currentLon = position.coords.longitude;
+          this.currentLat = position.coords.latitude;
+        })
+      }
     }
   }
 </script>
