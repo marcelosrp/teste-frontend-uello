@@ -15,7 +15,7 @@
     data () {
       return {
         accessToken: "pk.eyJ1IjoibWFyY2Vsb3NycCIsImEiOiJja2tyM3EwNWcwMWE3MndwbG96aXI5OHQwIn0.EvAdKRr-7stL8vtqBejMzw",
-        data: data[0]
+        data: data[0],
       };
     },
     mounted () {

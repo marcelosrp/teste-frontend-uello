@@ -5,7 +5,19 @@
       <Login :isMobile="false" name="hirota food express headquarters" />
     </div>
     <Tracking />
-    <Mapa :lon="currentLon" :lat="currentLat" />
+
+    <div v-if="errorStr">
+      Sorry, but the following error
+      occurred: {{errorStr}}
+    </div>
+    
+    <div v-if="gettingLocation">
+      <i>Getting your location...</i>
+    </div>
+    
+    
+      <Mapa v-if="location" :lon="location.coords.longitude" :lat="location.coords.latitude" />
+    
   </main>
 </template>
 
@@ -17,22 +29,32 @@
   export default {
     data () {
       return {
-        currentLat: null,
-        currentLon: null,
+        location: null,
+        gettingLocation: false,
+        errorStr: null
       }
+    },
+    created() {
+      //do we support geolocation
+      if(!("geolocation" in navigator)) {
+        this.errorStr = 'Geolocation is not available.';
+        return;
+      }
+
+      this.gettingLocation = true;
+      // get position
+      navigator.geolocation.getCurrentPosition(pos => {
+        this.gettingLocation = false;
+        this.location = pos;
+      }, err => {
+        this.gettingLocation = false;
+        this.errorStr = err.message;
+      })
     },
     components: {
       Login,
       Tracking,
       Mapa
-    },
-    mounted () {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((position) => {
-          this.currentLon = position.coords.longitude;
-          this.currentLat = position.coords.latitude;
-        })
-      }
     }
   }
 </script>
