@@ -2,24 +2,18 @@
   <div class="endereco">
     <b-icon icon="geo-alt-fill"></b-icon>
     <p class="endereco__texto">
-      {{ data.endereco.logradouro }}
+      
       <br>
-      {{ data.endereco.bairro }} - {{ data.endereco.cidade }} - {{ data.endereco.estado}}
+      
       <br>
-      {{ data.endereco.complemento }}
+     
     </p>
   </div>
 </template>
 
 <script>
-  import store from "../../store/store";
-
   export default {
-    data () {
-      return {
-        data: store.state.data[0]
-      }
-    },
+    
   }
 </script>
 

@@ -2,20 +2,14 @@
   <div class="horario">
     <b-icon icon="clock"></b-icon>
     <p class="horario__texto">
-      horário estimado: {{ data.horario_estimado.de }}  {{ data.horario_estimado.ate }}
+      horário estimado:
     </p>
   </div>
 </template>
 
 <script>
-  import store from "../../store/store";
-
   export default {
-    data () {
-      return {
-        data: store.state.data[0]
-      }
-    },
+    
   }
 </script>
 
