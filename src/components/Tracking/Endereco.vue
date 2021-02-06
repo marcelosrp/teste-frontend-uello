@@ -2,11 +2,11 @@
   <div class="endereco">
     <b-icon icon="geo-alt-fill"></b-icon>
     <p class="endereco__texto">
-      {{ data.endereco.logradouro }}
+      {{ endereco.logradouro }}
       <br>
-      {{ data.endereco.bairro }} - {{ data.endereco.cidade }} - {{ data.endereco.estado }}
+      {{ endereco.bairro }} - {{ endereco.cidade }} - {{ endereco.estado }}
       <br>
-      {{ data.endereco.complemento }}
+      {{ endereco.complemento }}
     </p>
   </div>
 </template>
@@ -17,7 +17,7 @@
   export default {
     data () {
       return {
-        data: data[0]
+        endereco: data[0].endereco
       }
     }
   }

@@ -4,21 +4,21 @@
     
     <ul class="infos-entrega__lista">
       <li>
-        Sua entrega é a nº: <span class="entrega-atual">{{ data.dados_entrega.entrega }}</span>
+        Sua entrega é a nº: <span class="entrega-atual">{{ dados_entrega.entrega }}</span>
       </li>
       <li>
-        Entrega atual: <span>{{ data.dados_entrega.atual }}</span>
+        Entrega atual: <span>{{ dados_entrega.atual }}</span>
       </li>
       <li>
-        Quantidade de volumes: <span>{{ data.dados_entrega.volume }}</span>
+        Quantidade de volumes: <span>{{ dados_entrega.volume }}</span>
       </li>
       <li>
-        Motorista: <span>{{ data.dados_entrega.motorista }}</span>
+        Motorista: <span>{{ dados_entrega.motorista }}</span>
       </li>
       <li>
         Horário Estimado: 
         <span>
-          {{ data.dados_entrega.estimativa.de }} - {{ data.dados_entrega.estimativa.ate }}
+          {{ dados_entrega.estimativa.de }} - {{ dados_entrega.estimativa.ate }}
         </span>
       </li>
     </ul>
@@ -32,7 +32,7 @@
   export default {
     data () {
       return {
-        data: data[0]
+        dados_entrega: data[0].dados_entrega
       }
     },
     components: {

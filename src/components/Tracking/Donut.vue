@@ -8,11 +8,11 @@
     unit="px"
     :auto-adjust-text-size="true"
   >
-    <p class="donut-text" v-if="data.qtd_entregas > 1">
-      Faltam<br><span>{{ data.qtd_entregas}}</span><br>Entregas
+    <p class="donut-text" v-if="entregas > 1">
+      Faltam<br><span>{{ entregas }}</span><br>Entregas
     </p>
     <p class="donut-text" v-else>
-      Falta<br><span>{{ data.qtd_entregas}}</span><br>Entrega
+      Falta<br><span>{{ entregas}}</span><br>Entrega
     </p>
   </vc-donut>
 </template>
@@ -22,7 +22,7 @@
   export default {
     data() {
       return {
-        data: data[0],
+        entregas: data[0].qtd_entregas,
         sections: [
           {
             value: 75,

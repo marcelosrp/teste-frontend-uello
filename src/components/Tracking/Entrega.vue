@@ -5,7 +5,7 @@
         Saiu para entrega
       </h2>
       <p class="entrega__texto">
-        Seu pedido da <strong>{{ data.remetente }}</strong> saiu para entrega,
+        Seu pedido da <strong>{{ remetente }}</strong> saiu para entrega,
         e será <strong>entregue</strong> no <strong>endereço</strong>:
       </p>
     </div>
@@ -22,7 +22,7 @@
   export default {
     data () {
       return {
-        data: data[0]
+        remetente: data[0].remetente
       }
     },
     props: {
