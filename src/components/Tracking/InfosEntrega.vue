@@ -1,6 +1,6 @@
 <template>
   <div class="infos-entrega">
-    <Donut />
+    <Donut bg="#FFFFFF" colorDonut="#0B4F6C" :perc="75" />
     
     <ul class="infos-entrega__lista">
       <li>

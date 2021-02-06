@@ -2,7 +2,7 @@
   <div v-if="onDelivery">
     <div class="entrega">
       <h2 class="entrega__titulo">
-        Saiu para entrega
+        {{ status }}
       </h2>
       <p class="entrega__texto">
         Seu pedido da <strong>{{ remetente }}</strong> saiu para entrega,
@@ -22,6 +22,7 @@
   export default {
     data () {
       return {
+        status: data[0].status,
         remetente: data[0].remetente
       }
     },

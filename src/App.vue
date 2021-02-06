@@ -13,7 +13,7 @@
     name: 'App',
     components: {
       Sidebar,
-      Wrapper
+      Wrapper,
     }
   }
 </script>

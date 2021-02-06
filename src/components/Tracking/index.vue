@@ -41,20 +41,17 @@
     width: 100%;
     z-index: 2;
 
-    &::-webkit-scrollbar-track
-    {
+    &::-webkit-scrollbar-track {
       box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
       background-color: var(--scrollbar-color);
     }
 
-    &::-webkit-scrollbar
-    {
+    &::-webkit-scrollbar {
       width: 0.5rem;
       background-color: var(--scrollbar-color);
     }
 
-    &::-webkit-scrollbar-thumb
-    {
+    &::-webkit-scrollbar-thumb {
       background-color: var(--primary-color);
       border: 0.125rem solid var(--primary-color);
     }

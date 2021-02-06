@@ -152,5 +152,13 @@
     box-shadow: 5px 1px 9px rgba(0, 0, 0, 0.25);
     height: 100%;
     width: 100%;
+
+    @media(max-width: 768px) {
+      left: 0;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+    }
   }
 </style>

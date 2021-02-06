@@ -1,18 +1,24 @@
 <template>
   <main class="main">
-    <!-- only desk login -->
+    <!-- only desk -->
     <div class="d-none d-sm-block">
       <Login :isMobile="false" name="hirota food express headquarters" />
+      <Tracking />
     </div>
 
-    <Tracking />
-    
+    <!-- only mobile -->
+    <div class="d-block d-sm-none">
+      <TrackingMobile />
+    </div>
+
+    <!-- Geolocation API error -->
     <div v-if="error" class="wrapper-messages">
       <h1 class="error-title">
         {{ error }}
       </h1>
     </div>
     
+    <!-- Geolocation API loading -->
     <div class="wrapper-messages" v-if="gettingLocation">
       <b-spinner
         :variant="variant"
@@ -31,12 +37,14 @@
 <script>
   import Login from "../Login";
   import Tracking from "../Tracking";
+  import TrackingMobile from "../Tracking/TrackingMobile";
   import Mapa from "../Mapa";
 
   export default {
     components: {
       Login,
       Tracking,
+      TrackingMobile,
       Mapa
     },
     data () {
@@ -81,6 +89,11 @@
     padding: 3.75rem 1.25rem;
     position: relative;
     width: 100%;
+
+    @media(max-width: 768px) {
+      flex-direction: column;
+      padding: 0.938rem;
+    }
   }
 
   .wrapper-messages {

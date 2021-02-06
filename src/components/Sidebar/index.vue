@@ -6,6 +6,8 @@
       width="46" 
       height="46"
     >
+
+    <!-- only mobile -->
     <div class="d-block d-sm-none">
       <Login :isMobile="true" name="hirota food express headquarters" />
     </div>
