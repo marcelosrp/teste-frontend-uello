@@ -24,6 +24,23 @@
         "de": "14:45",
         "ate": "16:58"
       }
-    }
+    },
+    "historico": [
+      {
+        "titulo": "Solicitação recebida",
+        "dia": "14/08",
+        "hora": "22:41"
+      },
+      {
+        "titulo": "Pedido em separação",
+        "dia": "15/08",
+        "hora": "16:20"
+      },
+      {
+        "titulo": "Motorista está a caminho",
+        "dia": "16/08",
+        "hora": "10:00"
+      }
+    ]
   }
 ]

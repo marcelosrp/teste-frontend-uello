@@ -8,17 +8,9 @@
       </label>
       <div class="tab-content">
         <ul class="tab-list">
-          <li>
-            Solicitação recebida
-            <span>14/08 - 22h41</span>
-          </li>
-          <li>
-            Pedido em separação
-            <span>15/08 - 16h23</span>
-          </li>
-          <li>
-            Motorista está a caminho
-            <span>16/08 - 10h00</span>
+          <li v-for="item in data" :key="item.titulo">
+            {{ item.titulo }}
+            <span>{{ item.dia }} - {{ item.hora }}</span>
           </li>
         </ul>
       </div>
@@ -27,8 +19,14 @@
 </template>
 
 <script>
+  import data from "../../data.json"
+  
   export default {
-
+    data () {
+      return {
+        data: data[0].historico
+      }
+    }
   }
 </script>
 
