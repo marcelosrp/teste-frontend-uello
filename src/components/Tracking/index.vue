@@ -33,30 +33,30 @@
   .status-box {
     background-color: #FFF;
     box-shadow: 5px 1px 9px rgba(0, 0, 0, 0.25);
-    border-radius: 4px 0px 0px 4px;
-    height: 600px;
+    border-radius: var(--radius-default) 0px 0px var(--radius-default);
+    height: 37.5rem;
     overflow: auto;
     padding: 1.25rem;
-    max-width: 320px;
+    max-width: 20rem;
     width: 100%;
     z-index: 2;
 
     &::-webkit-scrollbar-track
     {
       box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-      background-color: #F5F5F5;
+      background-color: var(--scrollbar-color);
     }
 
     &::-webkit-scrollbar
     {
-      width: 8px;
-      background-color: #F5F5F5;
+      width: 0.5rem;
+      background-color: var(--scrollbar-color);
     }
 
     &::-webkit-scrollbar-thumb
     {
       background-color: var(--primary-color);
-      border: 2px solid var(--primary-color);
+      border: 0.125rem solid var(--primary-color);
     }
   }
 </style>

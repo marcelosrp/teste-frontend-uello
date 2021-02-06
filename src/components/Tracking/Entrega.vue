@@ -37,7 +37,7 @@
 
 <style lang="scss" scoped>
   .entrega {
-    background-color: #0B4F6C;
+    background-color: var(--third-color);
     border-radius: var(--radius-default);
     color: #FFF;
     padding: 0.625rem 0.875rem;
@@ -45,7 +45,7 @@
 
     &__titulo {
       font-size: 0.875rem;
-      font-weight: 600;
+      font-weight: var(--f-semi-bold);
       text-transform: uppercase;
     }
 

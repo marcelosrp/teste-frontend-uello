@@ -43,14 +43,14 @@
       font-size: 0.6rem;
       position: relative;
       text-align: center;
-      color: #4B4B4D;
+      color: var(--secondary-color);
       z-index: 1;
       line-height: 0.625rem;
       font-weight: 600;
 
       &::before {
-        background-color: #CCC;
-        border: 2px solid #ccc;
+        background-color: var(--progress-bullet-color);
+        border: 2px solid var(--progress-bullet-color);
         border-radius: 50%;
         content: '';
         display: block;
@@ -64,7 +64,7 @@
       }
 
       &::after {
-        background-color: #CCC;
+        background-color: var(--progress-bullet-color);
         content: '';
         height: 0.125rem;
         left: -41%;
@@ -101,7 +101,7 @@
       }
 
       svg {
-        color: #CCC;
+        color: var(--progress-bullet-color);
         font-size: 1.5rem;
         left: 50%;
         position: absolute;

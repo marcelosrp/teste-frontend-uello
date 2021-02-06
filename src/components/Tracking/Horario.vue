@@ -22,7 +22,7 @@
 <style lang="scss" scoped>
   .horario {
     align-items: center;
-    color: #0B4F6C;
+    color: var(--third-color);
     display: flex;
     margin-top: 1.25rem;
     width: 100%;

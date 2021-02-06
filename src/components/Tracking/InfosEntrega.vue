@@ -45,7 +45,7 @@
   .infos-entrega {
     align-items: flex-start;
     display: flex;
-    height: 100px;
+    height: 6.25rem;
     justify-content: space-between;
     position: relative;
     margin: 1.25rem 0;
@@ -55,12 +55,12 @@
 
       li {
         font-size: 0.625rem;
-        font-weight: 700;
+        font-weight: var(--f-bold);
         list-style-type: none;
       }
 
       span {
-        font-weight: 600;
+        font-weight: var(--f-semi-bold);
 
         &.entrega-atual {
           color: var(--primary-color);

@@ -4,17 +4,11 @@
   </div>
 </template>
 
-<script>
-  export default {
-
-  }
-</script>
-
 <style lang="scss" scoped>
   .central-ajuda {
     align-items: center;
-    background-color: #4B4B4D;
-    border-radius: 4px;
+    background-color: var(--secondary-color);
+    border-radius: var(--radius-default);
     color: #FFF;
     display: flex;
     font-size: 0.75rem;

@@ -78,7 +78,7 @@
     }
 
     &-content {
-      background: white;
+      background-color: #FFF;
       border: 2px solid var(--primary-color);
       border-top: 0;
       max-height: 0;
@@ -87,7 +87,7 @@
     }
 
     &-list {
-      color: #4B4B4D;
+      color: var(--secondary-color);
       list-style-type: none;
       
       li {

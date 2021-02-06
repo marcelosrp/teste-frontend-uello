@@ -30,7 +30,7 @@
     &__name {
       color: var(--primary-color);
       font-size: 1rem;
-      font-weight: 700;
+      font-weight: var(--f-bold);
       margin: 0;
       padding-left: 0.938rem;
       position: relative;

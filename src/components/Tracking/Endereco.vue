@@ -27,7 +27,7 @@
   .endereco {
     align-items: flex-start;
     display: flex;
-    color: #4B4B4D;
+    color: var(--secondary-color);
     font-size: 0.75rem;
     margin-top: 1.25rem;
     width: 100%;

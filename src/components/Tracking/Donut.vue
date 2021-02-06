@@ -35,7 +35,7 @@
 </script>
 <style scoped>
   .donut-text {
-    color: #4B4B4D;
+    color: var(--secondary-color);
     font-size: 0.688rem;
     font-weight: 600;
     line-height: 1rem;

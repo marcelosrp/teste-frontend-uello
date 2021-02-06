@@ -108,7 +108,7 @@
             },
             paint: {
               "circle-radius": 10,
-              "circle-color": "#3887be",
+              "circle-color": "#0B4F6C",
             },
           });
 
@@ -133,7 +133,7 @@
             },
             paint: {
               "circle-radius": 10,
-              "circle-color": "#f30",
+              "circle-color": "#e63b4f",
             },
           });
         }
