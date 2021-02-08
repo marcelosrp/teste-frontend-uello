@@ -29,7 +29,7 @@
     display: flex;
     color: var(--secondary-color);
     font-size: 0.75rem;
-    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
     width: 100%;
 
     svg {

@@ -16,7 +16,7 @@
     </div>
 
     <div v-if="mobile">
-      <Historico />
+      <Historico :isMobile="true" />
     </div>
 
     <!-- Geolocation API error -->
@@ -124,7 +124,7 @@
     @media(max-width: 768px) {
       flex-direction: column;
       justify-content: space-between;
-      min-height: 90vh;
+      min-height: calc(100vh - 60px);
       padding: 0.625rem;
     }
   }

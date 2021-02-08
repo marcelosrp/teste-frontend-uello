@@ -24,7 +24,6 @@
     align-items: center;
     color: var(--third-color);
     display: flex;
-    margin-top: 1.25rem;
     width: 100%;
 
     svg {

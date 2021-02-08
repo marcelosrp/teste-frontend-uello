@@ -7,6 +7,7 @@
         Histórico
       </label>
       <div class="tab-content">
+        <Endereco v-if="isMobile" />
         <ul class="tab-list">
           <li v-for="item in data" :key="item.titulo">
             {{ item.titulo }}
@@ -19,9 +20,16 @@
 </template>
 
 <script>
-  import data from "../../data.json"
+  import data from "../../data.json";
+  import Endereco from "./Endereco";
   
   export default {
+    props: {
+      isMobile: Boolean
+    },
+    components: {
+      Endereco
+    },
     data () {
       return {
         data: data[0].historico

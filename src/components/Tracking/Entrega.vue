@@ -41,6 +41,7 @@
     background-color: var(--third-color);
     border-radius: var(--radius-default);
     color: #FFF;
+    margin-bottom: 1.25rem;
     padding: 0.625rem 0.875rem;
     width: 100%;
 
