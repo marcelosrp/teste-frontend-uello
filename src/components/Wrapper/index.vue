@@ -11,6 +11,7 @@
       <div class="infos-top-mobile">
         <Donut bg="#0b4f6c" colorDonut="#02BAEF" :perc="75" :isMobile="true" />
         <div>
+          <Progresso :isMobile="true" />
           <EntregaMobile />
         </div>
       </div>
@@ -43,6 +44,7 @@
   import Login from "../Login";
   import Tracking from "../Tracking";
   import Donut from "../Tracking/Donut";
+  import Progresso from "../Tracking/Progresso";
   import EntregaMobile from "../Tracking/EntregaMobile";
   import Mapa from "../Mapa";
 
@@ -52,6 +54,7 @@
       Tracking,
       Donut,
       EntregaMobile,
+      Progresso,
       Mapa
     },
     data () {

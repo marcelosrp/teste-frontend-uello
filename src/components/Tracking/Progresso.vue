@@ -1,27 +1,29 @@
 <template>
-    <ul class="progressbar">
+    <ul class="progressbar" :class="[ isMobile && 'mobile' ]">
       <li class="active">
         <b-icon icon="inbox-fill"></b-icon>
-        Solicitação
+        <span>Solicitação</span>
       </li>
       <li class="active">
         <b-icon icon="clock"></b-icon>
-        Pedido em <br /> separação
+        <span>Pedido em <br /> separação</span>
       </li>
       <li class="active">
         <b-icon icon="truck"></b-icon>
-        Motorista <br /> em trânsito
+        <span>Motorista <br /> em trânsito</span>
       </li>
       <li>
         <b-icon icon="check"></b-icon>
-        Pedido <br /> entregue
+        <span>Pedido <br /> entregue</span>
       </li>
     </ul>
 </template>
 
 <script>
   export default {
-
+    props: {
+      isMobile: Boolean
+    }
   }
 </script>
 
@@ -35,6 +37,25 @@
     counter-reset: step;
     margin: 3.75rem 0 2rem 0;
     width: 100%;
+
+    &.mobile {
+      margin: 1.875rem 0 0 0;
+
+      li {
+        &::before {
+          background-color: #FFF;
+          border: 2px solid #FFF
+        }
+
+        &::after {
+          background-color: #FFF;
+        }
+      }
+
+      span {
+        display: none;
+      }
+    }
 
     li {
       list-style-type: none;
