@@ -75,7 +75,7 @@
       window.addEventListener("load", this.isMobileFn);
 
       if(!("geolocation" in navigator)) {
-        this.error = 'Geolocation is not available.';
+        this.error = 'Seu navegador não suporta Geolocalização.';
         return;
       }
 
