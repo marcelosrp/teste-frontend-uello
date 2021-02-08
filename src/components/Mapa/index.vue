@@ -29,7 +29,7 @@
           container: "mapContainer",
           style: "mapbox://styles/mapbox/streets-v11",
           center: [this.lon, this.lat],
-          zoom: 14,
+          zoom: 13.5,
         });
 
         const nav = new mapboxgl.NavigationControl();

@@ -34,6 +34,7 @@
       display: flex;
       justify-content: space-between;
       min-height: auto;
+      padding: 0.313rem;
     }
   }
 </style>

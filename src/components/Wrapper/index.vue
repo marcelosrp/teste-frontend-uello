@@ -8,7 +8,12 @@
 
     <!-- only mobile -->
     <div class="d-block d-sm-none">
-      <TrackingMobile />
+      <div class="infos-top-mobile">
+        <Donut bg="#0b4f6c" colorDonut="#02BAEF" :perc="75" :isMobile="true" />
+        <div>
+          <EntregaMobile />
+        </div>
+      </div>
     </div>
 
     <!-- Geolocation API error -->
@@ -37,14 +42,16 @@
 <script>
   import Login from "../Login";
   import Tracking from "../Tracking";
-  import TrackingMobile from "../Tracking/TrackingMobile";
+  import Donut from "../Tracking/Donut";
+  import EntregaMobile from "../Tracking/EntregaMobile";
   import Mapa from "../Mapa";
 
   export default {
     components: {
       Login,
       Tracking,
-      TrackingMobile,
+      Donut,
+      EntregaMobile,
       Mapa
     },
     data () {
@@ -92,7 +99,7 @@
 
     @media(max-width: 768px) {
       flex-direction: column;
-      padding: 0.938rem;
+      padding: 0.625rem;
     }
   }
 
@@ -108,5 +115,17 @@
     font-size: 1.25rem;
     text-align: center;
     width: 60%;
+  }
+
+  .infos-top-mobile {
+    align-items: center;
+    background-color: var(--third-color);
+    border-radius: var(--radius-default);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.625rem;
+    position: relative;
+    width: 100%;
+    z-index: 3;
   }
 </style>
