@@ -51,7 +51,9 @@
   .tab {
     color: var(--primary-color);
     overflow: hidden;
+    position: relative;
     width: 100%;
+    z-index: 3;
 
     &-label {
       align-items: center;

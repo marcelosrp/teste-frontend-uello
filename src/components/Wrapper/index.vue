@@ -1,20 +1,22 @@
 <template>
   <main class="main">
     <!-- only desk -->
-    <div class="d-none d-sm-block">
+    <div v-if="!mobile">
       <Login :isMobile="false" name="hirota food express headquarters" />
       <Tracking />
     </div>
 
     <!-- only mobile -->
-    <div class="d-block d-sm-none">
-      <div class="infos-top-mobile">
-        <Donut bg="#0b4f6c" colorDonut="#02BAEF" :perc="75" :isMobile="true" />
-        <div>
-          <Progresso :isMobile="true" />
-          <EntregaMobile />
-        </div>
+    <div class="infos-top-mobile" v-if="mobile">
+      <Donut bg="#0b4f6c" colorDonut="#02BAEF" :perc="75" :isMobile="true" />
+      <div>
+        <Progresso :isMobile="true" />
+        <EntregaMobile />
       </div>
+    </div>
+
+    <div v-if="mobile">
+      <Historico />
     </div>
 
     <!-- Geolocation API error -->
@@ -46,6 +48,7 @@
   import Donut from "../Tracking/Donut";
   import Progresso from "../Tracking/Progresso";
   import EntregaMobile from "../Tracking/EntregaMobile";
+  import Historico from "../Tracking/Historico";
   import Mapa from "../Mapa";
 
   export default {
@@ -55,6 +58,7 @@
       Donut,
       EntregaMobile,
       Progresso,
+      Historico,
       Mapa
     },
     data () {
@@ -62,10 +66,14 @@
         location: null,
         gettingLocation: false,
         error: null,
-        variant: "danger"
+        variant: "danger",
+        mobile: false
       }
     },
     created() {
+      window.addEventListener("resize", this.isMobileFn);
+      window.addEventListener("load", this.isMobileFn);
+
       if(!("geolocation" in navigator)) {
         this.error = 'Geolocation is not available.';
         return;
@@ -88,6 +96,19 @@
           this.error = "Não foi possível pegar a sua localização atual. Atualize a página para tentar novamente"
         }
       })
+    },
+    destroyed() {
+      window.removeEventListener("resize", this.isMobileFn);
+      window.removeEventListener("load", this.isMobileFn);
+    },
+    methods: {
+      isMobileFn () {
+        if (matchMedia('(max-width: 768px)').matches) {
+          this.mobile = true
+        } else {
+            this.mobile = false
+        }
+      }
     }
   }
 </script>
@@ -102,6 +123,8 @@
 
     @media(max-width: 768px) {
       flex-direction: column;
+      justify-content: space-between;
+      min-height: 90vh;
       padding: 0.625rem;
     }
   }

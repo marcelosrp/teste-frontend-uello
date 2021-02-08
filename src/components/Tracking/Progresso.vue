@@ -50,11 +50,19 @@
         &::after {
           background-color: #FFF;
         }
+
+        &.active {
+          svg {
+            color: #FFF;
+          }
+        }
       }
 
       span {
         display: none;
       }
+
+      
     }
 
     li {

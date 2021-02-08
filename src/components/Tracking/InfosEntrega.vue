@@ -51,6 +51,7 @@
     margin: 1.25rem 0;
 
     &__lista {
+      margin-left: 0.625rem;
       width: 10rem;
 
       li {
