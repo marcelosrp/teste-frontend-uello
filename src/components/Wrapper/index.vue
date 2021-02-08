@@ -124,7 +124,7 @@
     @media(max-width: 768px) {
       flex-direction: column;
       justify-content: space-between;
-      min-height: calc(100vh - 60px);
+      min-height: calc(100vh - 120px);
       padding: 0.625rem;
     }
   }
