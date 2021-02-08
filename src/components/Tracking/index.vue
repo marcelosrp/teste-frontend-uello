@@ -34,7 +34,7 @@
     background-color: #FFF;
     box-shadow: 5px 1px 9px rgba(0, 0, 0, 0.25);
     border-radius: var(--radius-default) 0px 0px var(--radius-default);
-    height: 37.5rem;
+    height: 100%;
     overflow: auto;
     padding: 1.25rem;
     max-width: 20rem;
